@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 隐藏地址栏，优化体验 -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimal-ui">
+    <title>Contact WhatsApp</title>
+    <script>
+        // 这里放你的3个WhatsApp账号（去掉空格，仅保留国家码+手机号）
+        const waNumbers = [
+            "8613890174417",
+            "8619994654895",
+            "8618923713151"
+        ];
+        // 随机选1个账号
+        const randomNumber = waNumbers[Math.floor(Math.random() * waNumbers.length)];
+        // 自动跳转（200ms延迟，几乎无感知）
+        window.onload = function() {
+            window.location.href = `https://wa.me/${randomNumber}?text=Hi%20I%20want%20to%20inquire%20about%20thermal%20imaging%20cameras`;
+        };
+    </script>
+    <!-- 极简样式，适配Meta弹窗 -->
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f5f5f5;
+        }
+        .loading {
+            color: #333;
+            font-size: 16px;
+            margin-top: 50px;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+    <!-- 多语言提示，适配波兰客户 -->
+    <div class="loading">Przekierowywanie do wsparcia WhatsApp...<br>Redirecting to WhatsApp support...</div>
+</body>
+</html>
